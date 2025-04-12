@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bacterial Leaf Streak | Paddy Plant Disease Detection</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Information about Bacterial Leaf Streak disease in paddy plants"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/styles.css" />
+    <style>
+      .disease-header {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("../static/streak-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        color: white;
+        margin-bottom: 40px;
+      }
+
+      .symptom-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 15px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .management-card {
+        border-left: 4px solid #28a745;
+        transition: all 0.3s ease;
+      }
+
+      .management-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <i class="fas fa-leaf me-2"></i>PaddyDiagnose
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                id="diseasesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Diseases
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="leafblight.html"
+                  >Bacterial leaf blight</a
+                >
+                <a class="dropdown-item active" href="leafstreak.html"
+                  >Bacterial leaf streak</a
+                >
+                <a class="dropdown-item" href="panicle.html"
+                  >Bacterial panicle blight</a
+                >
+                <a class="dropdown-item" href="blast.html">Blast</a>
+                <a class="dropdown-item" href="brown.html">Brown spot</a>
+                <a class="dropdown-item" href="DeadHeart.html">Dead heart</a>
+                <a class="dropdown-item" href="downy.html">Downy mildew</a>
+                <a class="dropdown-item" href="hispa.html">Hispa</a>
+                <a class="dropdown-item" href="tungro.html">Tungro</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Guide</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div id="google_translate_element"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Disease Header -->
+    <section class="disease-header">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold">Bacterial Leaf Streak</h1>
+        <p class="lead">
+          Caused by <i>Xanthomonas oryzae</i> pv. <i>oryzicola</i>
+        </p>
+      </div>
+    </section>
+
+    <!-- Disease Content -->
+    <section class="container mb-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title text-success">
+                <i class="fas fa-info-circle me-2"></i>Disease Information
+              </h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <p>
+                    <strong>Common Name:</strong><br />
+                    Rice bacterial leaf streak; rice black chaff
+                  </p>
+                  <p>
+                    <strong>Scientific Name:</strong><br />
+                    <i>Xanthomonas oryzae</i> pv. <i>oryzicola</i>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p>
+                    <strong>Distribution:</strong><br />
+                    Asia, Africa, Australasia - restricted
+                  </p>
+                  <p>
+                    <strong>Primary Host:</strong><br />
+                    Rice (<i>Oryza sativa</i>)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="text-success mb-4">
+                <i class="fas fa-exclamation-triangle me-2"></i>Symptoms
+              </h3>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <ul>
+                    <li>
+                      Initially, small, dark-green and water-soaked streaks on
+                      interveins from tillering to booting stage
+                    </li>
+                    <li>
+                      The progress of the streaks is longitudinal, limited by
+                      the veins and soon turn yellow or orange brown
+                    </li>
+                    <li>
+                      All along the streaks bacterial exudates could be observed
+                      as tiny yellow or amber colored droplets
+                    </li>
+                    <li>
+                      These streaks may coalesce to form large patches and cover
+                      the entire leaf surface
+                    </li>
+                    <li>
+                      Lesions turn brown to greyish white then dry when disease
+                      is severe
+                    </li>
+                    <li>
+                      Infection in the florets and seeds results in brown or
+                      black discoloration and death of ovary, stamens and
+                      endosperm and browning of glumes
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <img
+                src="../static/streak-symptoms.jpg"
+                alt="Bacterial Leaf Streak Symptoms"
+                class="symptom-img"
+              />
+            </div>
+          </div>
+
+          <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="text-success mb-4">
+                <i class="fas fa-microscope me-2"></i>Pathogen Identification
+              </h3>
+
+              <ul>
+                <li>Rod-shaped bacteria (1.2 x 0.3-0.5 µm)</li>
+                <li>Single, occasionally in pairs but not in chains</li>
+                <li>Gram negative, non-spore-forming, no capsules</li>
+                <li>Single polar flagellum for movement</li>
+                <li>Pale yellow, circular colonies on nutrient agar</li>
+                <li>Grows optimally at 28°C</li>
+              </ul>
+
+              <h5 class="text-success mt-4">Favorable Conditions</h5>
+              <ul>
+                <li>Presence of bacteria on leaves and in water or debris</li>
+                <li>Warm temperatures (25-30°C) with high humidity</li>
+                <li>
+                  Early stage of planting from maximum tillering to panicle
+                  initiation
+                </li>
+                <li>Wet conditions and poor drainage</li>
+                <li>
+                  Spread through rain splash, irrigation water, and contaminated
+                  tools
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="text-success mb-4">
+                <i class="fas fa-seedling me-2"></i>Management Strategies
+              </h3>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="management-card p-4 h-100">
+                    <h5 class="text-success">Preventive Methods</h5>
+                    <ul>
+                      <li>
+                        Use hot water treated seeds (52-54°C for 30 minutes)
+                      </li>
+                      <li>Seed treatment with bleaching powder (100g/l)</li>
+                      <li>Spray fresh cowdung water extract (20%)</li>
+                      <li>Apply neem oil 3% or NSKE 5%</li>
+                      <li>
+                        Maintain field sanitation and remove infected debris
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="management-card p-4 h-100">
+                    <h5 class="text-success">Cultural Methods</h5>
+                    <ul>
+                      <li>Plant resistant varieties (IR 20, TKM 6)</li>
+                      <li>Use disease-free seed from upland nurseries</li>
+                      <li>Avoid clipping of seedlings during transplanting</li>
+                      <li>
+                        Maintain proper plant spacing for good air circulation
+                      </li>
+                      <li>
+                        Provide good drainage system especially in seedbeds
+                      </li>
+                      <li>Destroy ratoons, straws and volunteer seedlings</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="management-card p-4">
+                    <h5 class="text-success">Chemical Methods</h5>
+                    <ul>
+                      <li>
+                        Spray streptomycin sulphate + tetracycline combination
+                        (300g) + copper oxychloride (1.25 kg/ha)
+                      </li>
+                      <li>
+                        Apply bleaching powder @ 5 kg/ha in irrigation water
+                      </li>
+                      <li>
+                        Foliar spray with copper fungicides alternated with
+                        Streptocyclin (250 ppm)
+                      </li>
+                      <li>Repeat sprays at 15-day intervals if needed</li>
+                      <li>
+                        Spray lemon grass or mint extract at 20% concentration
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2023 PaddyDiagnose. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-white"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Google Translate -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
