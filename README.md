@@ -41,6 +41,13 @@ flask run
 ```
 5. Open your browser at ```http://localhost:5000```
 
+🖥️ Usage Demo
+Upload Interface
+Upload Screen
+
+Results Page
+Results Screen
+
 ## 🌿 Supported Diseases
 
 <div align="center">
@@ -54,3 +61,20 @@ flask run
 | **Healthy Plant** | <img src="static/examples/healthy.jpg" width="150"> | No disease detected | >90% |
 
 </div>
+
+## 🏗️ Project Architecture
+
+```mermaid
+graph TD
+    A[Client Browser] -->|HTTP Request| B[Flask Server]
+    B --> C[Image Preprocessing]
+    C --> D[TensorFlow Model]
+    D --> E[Grad-CAM Heatmap]
+    E --> F[Result Generation]
+    F -->|JSON Response| A
+    D --> G[Database]
+    G -->|Store Reports| H[(MySQL/PostgreSQL)]
+    style A fill:#4CAF50,stroke:#388E3C
+    style B fill:#2196F3,stroke:#0D47A1
+    style D fill:#FF9800,stroke:#E65100
+```
