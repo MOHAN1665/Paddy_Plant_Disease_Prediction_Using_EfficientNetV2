@@ -1,0 +1,22 @@
+.textplacing{
+  border: 5px ;
+  margin: 50px 50px 50px 50px;
+}
+
+.textplacing h3{
+  font-weight: bold;
+}
+
+.textplacing h5 
+{
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.textplacing ul{
+  padding-left: 50px;
+}
+.textplacing ul li{
+  padding-left: 20px;
+}
+
