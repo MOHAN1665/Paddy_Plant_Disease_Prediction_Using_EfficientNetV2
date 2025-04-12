@@ -47,10 +47,10 @@ flask run
 
 | Disease Name | Example Image | Description | Confidence Threshold |
 |--------------|---------------|-------------|----------------------|
-| **Bacterial Leaf Blight** | <img src="static/examples/blight.jpg" width="150"> | Yellowing and wilting of leaves | >75% |
-| **Bacterial Leaf Streak** | <img src="static/examples/streak.jpg" width="150"> | Linear yellow streaks between veins | >70% |
-| **Blast Disease** | <img src="static/examples/blast.jpg" width="150"> | Diamond-shaped lesions with gray centers | >80% |
-| **Brown Spot** | <img src="static/examples/brown_spot.jpg" width="150"> | Small brown spots with yellow halos | >65% |
+| **Bacterial Leaf Blight** | <img src="static/examples/blight.jpeg" width="150"> | Yellowing and wilting of leaves | >75% |
+| **Bacterial Leaf Streak** | <img src="static/examples/streak.jpeg" width="150"> | Linear yellow streaks between veins | >70% |
+| **Blast Disease** | <img src="static/examples/blast.jpeg" width="150"> | Diamond-shaped lesions with gray centers | >80% |
+| **Brown Spot** | <img src="static/examples/brown.jpg" width="150"> | Small brown spots with yellow halos | >65% |
 | **Healthy Plant** | <img src="static/examples/healthy.jpg" width="150"> | No disease detected | >90% |
 
 </div>
