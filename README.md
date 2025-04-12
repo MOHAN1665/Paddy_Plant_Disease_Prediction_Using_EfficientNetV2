@@ -21,17 +21,21 @@
 
 ## 📦 Installation
 
-1.Clone the repository
+1. Clone the repository
 ```bash
 git clone https://github.com/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2.git
 cd plant-disease-detection
 ```
-# Create and activate virtual environment
+2. Create and activate virtual environment:
+```bash
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-
-# Install dependencies
+source venv/bin/activate  # On Windows use `venv\Scripts\activate
+```
+3. Install dependencies:
+```bash
 pip install -r requirements.txt
-
-# Run the application
+```
+4. Run the application:
+```bash
 flask run
+```
