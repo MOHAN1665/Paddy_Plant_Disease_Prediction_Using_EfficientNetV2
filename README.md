@@ -1,6 +1,7 @@
 <div align="center">
-# 🌱 Plant Disease Detection System
+<h1> 🌱 Plant Disease Detection System</h1>
 </div>
+
 ![Project Banner](static/examples/paddy.png)  
 *An AI-powered solution for detecting diseases in rice plants*
 
