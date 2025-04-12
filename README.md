@@ -41,12 +41,34 @@ flask run
 ```
 5. Open your browser at ```http://localhost:5000```
 
-🖥️ Usage Demo
-Upload Interface
-Upload Screen
+## 🖥️ Usage Demo
 
-Results Page
-Results Screen
+<div align="center">
+
+### 📤 Upload Interface
+[![Upload Screen](static/screenshots/upload_thumb.png)](static/screenshots/upload.png)  
+*Click image to enlarge*
+
+### 📊 Results Page
+[![Results Screen](static/screenshots/results_thumb.png)](static/screenshots/results.png)  
+*Click image to enlarge*
+
+</div>
+
+### Step-by-Step Guide:
+1. **Upload Page**:
+   - Click "Choose File" to select plant image
+   - Supported formats: JPG, PNG (max 5MB)
+   - Click "Predict" to analyze
+
+2. **Results Page**:
+   - View original image + heatmap visualization
+   - See disease prediction with confidence percentage
+   - Options to:
+     - View disease details
+     - Report incorrect predictions
+     - Upload new image
+
 
 ## 🌿 Supported Diseases
 
