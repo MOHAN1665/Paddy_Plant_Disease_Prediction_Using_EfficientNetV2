@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blast Disease | Paddy Plant Disease Detection</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Information about Blast disease in paddy plants"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/styles.css" />
+    <style>
+      .disease-header {
+          background: linear-gradient(rgba(0,0,0,0.7), url('../static/blast-bg.jpg');
+          background-size: cover;
+          background-position: center;
+          padding: 100px 0;
+          color: white;
+          margin-bottom: 40px;
+      }
+
+      .symptom-img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          margin: 15px 0;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .management-card {
+          border-left: 4px solid #28a745;
+          transition: all 0.3s ease;
+      }
+
+      .management-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <i class="fas fa-leaf me-2"></i>PaddyDiagnose
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                id="diseasesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Diseases
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="leafblight.html"
+                  >Bacterial leaf blight</a
+                >
+                <a class="dropdown-item" href="leafstreak.html"
+                  >Bacterial leaf streak</a
+                >
+                <a class="dropdown-item" href="panicle.html"
+                  >Bacterial panicle blight</a
+                >
+                <a class="dropdown-item active" href="blast.html">Blast</a>
+                <a class="dropdown-item" href="brown.html">Brown spot</a>
+                <a class="dropdown-item" href="DeadHeart.html">Dead heart</a>
+                <a class="dropdown-item" href="downy.html">Downy mildew</a>
+                <a class="dropdown-item" href="hispa.html">Hispa</a>
+                <a class="dropdown-item" href="tungro.html">Tungro</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Guide</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div id="google_translate_element"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Disease Header -->
+    <section class="disease-header">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold">Blast of Rice</h1>
+        <p class="lead">Also known as Rotten neck or Rice fever</p>
+      </div>
+    </section>
+
+    <!-- Disease Content -->
+    <section class="container mb-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title text-success">
+                <i class="fas fa-info-circle me-2"></i>Disease Information
+              </h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <p>
+                    <strong>Scientific Name:</strong><br />
+                    <i>Pyricularia oryzae</i>
+                  </p>
+                  <p>
+                    <strong>Distribution:</strong><br />
+                    Worldwide in rice-growing regions
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p>
+                    <strong>Primary Host:</strong><br />
+                    Rice (<i>Oryza sativa</i>)
+                  </p>
+                  <p>
+                    <strong>Secondary Host:</strong><br />
+                    Maize
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="text-success mb-4">
+                <i class="fas fa-exclamation-triangle me-2"></i>Symptoms
+              </h3>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <h5 class="text-success">Leaf Blast</h5>
+                  <ul>
+                    <li>White to gray-green lesions with brown borders</li>
+                    <li>Spindle-shaped spots (0.5-1.5cm long)</li>
+                    <li>
+                      Several spots coalesce to form big irregular patches
+                    </li>
+                    <li>Severe cases give a blasted appearance</li>
+                  </ul>
+                  <img
+                    src="../static/blast-leaf.jpg"
+                    alt="Leaf Blast"
+                    class="symptom-img"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <h5 class="text-success">Neck Blast</h5>
+                  <ul>
+                    <li>Grayish brown lesions on the neck</li>
+                    <li>Causes girdling of the neck</li>
+                    <li>Panicle falls over (rotten neck)</li>
+                    <li>No grain formation if infected before milk stage</li>
+                  </ul>
+                  <img
+                    src="../static/blast-neck.jpg"
+                    alt="Neck Blast"
+                    class="symptom-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="text-success mb-4">
+                <i class="fas fa-seedling me-2"></i>Management Strategies
+              </h3>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="management-card p-4 h-100">
+                    <h5 class="text-success">Cultural Methods</h5>
+                    <ul>
+                      <li>
+                        Plant resistant varieties (CO 47, CO 50, ADT 36-39, ASD
+                        16-20, etc.)
+                      </li>
+                      <li>Avoid excess nitrogen fertilizer</li>
+                      <li>Apply nitrogen in three split doses</li>
+                      <li>Remove weed hosts from bunds</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="management-card p-4 h-100">
+                    <h5 class="text-success">Preventive Methods</h5>
+                    <ul>
+                      <li>Avoid dry nurseries and late planting</li>
+                      <li>Burn straw and stubbles after harvest</li>
+                      <li>Seed treatment with Pseudomonas fluorescens</li>
+                      <li>Seedling root dip in biocontrol agents</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="management-card p-4">
+                    <h5 class="text-success">Chemical Control</h5>
+                    <ul>
+                      <li>
+                        Seed treatment with
+                        Captan/Carbendazim/Thiram/Tricyclazole (2g/kg seed)
+                      </li>
+                      <li>
+                        Spray Tricyclazole (1g/l) or Edifenphos (1ml/l) or
+                        Carbendazim (1g/l)
+                      </li>
+                      <li>3-4 sprays at critical growth stages</li>
+                      <li>
+                        Systemic fungicides like pyroquilon and tricyclazole are
+                        effective
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2023 PaddyDiagnose. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-white"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Google Translate -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
