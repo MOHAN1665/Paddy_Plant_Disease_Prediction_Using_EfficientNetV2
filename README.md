@@ -39,3 +39,4 @@ pip install -r requirements.txt
 ```bash
 flask run
 ```
+5. Open your browser at ```http://localhost:5000```
