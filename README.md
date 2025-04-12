@@ -40,3 +40,11 @@ pip install -r requirements.txt
 flask run
 ```
 5. Open your browser at ```http://localhost:5000```
+
+## 🏗️ Project Architecture
+graph TD
+    A[User Interface] -->|Upload Image| B(Flask Server)
+    B --> C[Preprocessing]
+    C --> D[TensorFlow Model]
+    D --> E[Grad-CAM Heatmap]
+    E --> F[Results Display]
