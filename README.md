@@ -21,11 +21,11 @@
 
 ## 📦 Installation
 
+# 1.Clone the repository
 ```bash
-# Clone the repository
 git clone https://github.com/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2.git
 cd plant-disease-detection
-
+```
 # Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
