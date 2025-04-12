@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Paddy Plant Disease Detection | AI-Powered Solution</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="AI-powered paddy plant disease detection system for farmers"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <i class="fas fa-leaf me-2"></i>PaddyDiagnose
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="diseasesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Diseases
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="../new/leafblight.html"
+                  >Bacterial leaf blight</a
+                >
+                <a class="dropdown-item" href="../new/leafstreak.html"
+                  >Bacterial leaf streak</a
+                >
+                <a class="dropdown-item" href="../new/panicle.html"
+                  >Bacterial panicle blight</a
+                >
+                <a class="dropdown-item" href="../new/blast.html">Blast</a>
+                <a class="dropdown-item" href="../new/brown.html">Brown spot</a>
+                <a class="dropdown-item" href="../new/DeadHeart.html"
+                  >Dead heart</a
+                >
+                <a class="dropdown-item" href="../new/downy.html"
+                  >Downy mildew</a
+                >
+                <a class="dropdown-item" href="../new/hispa.html">Hispa</a>
+                <a class="dropdown-item" href="../new/tungro.html">Tungro</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Guide</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <div id="google_translate_element" class="me-3"></div>
+            <a href="#" class="btn btn-outline-light me-2">Login</a>
+            <button class="btn btn-light">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container text-center text-white">
+        <h1 class="display-4 fw-bold mb-4">Paddy Disease Detection</h1>
+        <p class="lead mb-5">
+          Upload an image of your paddy plant to detect diseases instantly
+        </p>
+
+        <div class="card mx-auto" style="max-width: 600px">
+          <div class="card-body p-4">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <a
+                  href="../new/camera.html"
+                  class="btn btn-success btn-lg w-100 py-3"
+                >
+                  <i class="fas fa-camera me-2"></i>Use Camera
+                </a>
+              </div>
+              <div class="col-md-6">
+                <form
+                  id="upload-file"
+                  method="post"
+                  enctype="multipart/form-data"
+                >
+                  <label
+                    id="upload-label"
+                    for="imageUpload"
+                    class="btn btn-outline-success btn-lg w-100 py-3 upload-label"
+                  >
+                    <i class="fas fa-upload me-2"></i>Upload Image
+                  </label>
+                  <input
+                    type="file"
+                    name="file"
+                    id="imageUpload"
+                    accept=".png, .jpg, .jpeg"
+                    class="d-none"
+                  />
+                </form>
+              </div>
+            </div>
+
+            <div class="image-section mt-4" style="display: none">
+              <div class="img-preview mb-4">
+                <div id="imagePreview"></div>
+              </div>
+              <button
+                type="button"
+                class="btn btn-success btn-lg w-100"
+                id="btn-predict"
+              >
+                <i class="fas fa-search me-2"></i>Analyze Image
+              </button>
+            </div>
+
+            <div class="loader text-center py-4" style="display: none">
+              <div class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <p class="mt-2 mb-0">Analyzing your image...</p>
+            </div>
+
+            <div
+              id="invalid-image-alert"
+              class="alert alert-danger"
+              style="display: none"
+            >
+              <i class="fas fa-times-circle me-2"></i>
+              <strong>Invalid Image:</strong> Please upload a clear photo of
+              paddy leaves.
+              <div class="mt-2">
+                <img
+                  src="static/examples/valid_example.jpg"
+                  style="height: 100px"
+                  class="me-2 border"
+                />
+                <img
+                  src="static/examples/invalid_example.jpg"
+                  style="height: 100px"
+                  class="border"
+                />
+              </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="result-container" class="mt-4" style="display: none">
+              <h3 class="text-center mb-4">Analysis Results</h3>
+
+              <!-- Unknown Disease Alert (new) -->
+              <div
+                id="unknown-disease-alert"
+                class="alert alert-warning"
+                style="display: none"
+              >
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                <strong>Low Confidence Detection:</strong> This might be an
+                unknown disease.
+                <button id="btn-report" class="btn btn-sm btn-warning ms-2">
+                  <i class="fas fa-flag me-1"></i> Report
+                </button>
+              </div>
+
+              <div class="row g-4">
+                <!-- Original Image -->
+                <div id="original-col" class="col-md-6">
+                  <div class="card h-100 shadow-sm fixed-height-card">
+                    <div class="card-header bg-success text-white">
+                      <h5 class="card-title mb-0">
+                        <i class="fas fa-image me-2"></i>Original Image
+                      </h5>
+                    </div>
+                    <div class="card-body text-center p-0">
+                      <img
+                        id="original-image"
+                        src=""
+                        class="img-fluid rounded-bottom"
+                        style="max-height: 400px; width: auto"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Grad-CAM Image -->
+                <div id="gradcam-col" class="col-md-6">
+                  <div class="card h-100 shadow-sm fixed-height-card">
+                    <div class="card-header bg-info text-white">
+                      <h5 class="card-title mb-0">
+                        <i class="fas fa-search-plus me-2"></i>Disease Heatmap
+                      </h5>
+                    </div>
+                    <div class="card-body text-center p-0">
+                      <img
+                        id="gradcam-image"
+                        src=""
+                        class="img-fluid rounded-bottom"
+                        style="max-height: 400px; width: auto"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Prediction Results -->
+              <div class="card mt-4 shadow-sm">
+                <div class="card-body text-center">
+                  <h4 class="card-title mb-3">
+                    <i class="fas fa-diagnoses me-2 text-success"></i>Diagnosis
+                    Results
+                  </h4>
+                  <div class="alert alert-success py-3">
+                    <h5 class="mb-2">Prediction</h5>
+                    <p class="display-6 fw-bold" id="prediction-text">-</p>
+                  </div>
+                  <!-- Add this right below your prediction text in the results card -->
+                  <div class="confidence-display mt-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span>Confidence Level:</span>
+                      <span id="confidence-percent" class="fw-bold">-</span>
+                    </div>
+                    <div class="progress" style="height: 20px">
+                      <div
+                        id="confidence-bar"
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 0%"
+                        aria-valuenow="0"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <small class="text-muted d-block mt-1" id="confidence-label"
+                      >Low confidence</small
+                    >
+                  </div>
+                  <button id="btn-details" class="btn btn-success mt-2">
+                    <i class="fas fa-info-circle me-2"></i>View Disease Details
+                  </button>
+                  <button id="btn-clear" class="btn btn-danger ms-2">
+                    <i class="fas fa-times me-1"></i> Clear
+                  </button>
+                </div>
+              </div>
+
+              <!-- Report Modal (new) -->
+              <div
+                class="modal fade"
+                id="reportModal"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header bg-warning">
+                      <h5 class="modal-title">
+                        <i class="fas fa-flag me-2"></i>Report Unknown Disease
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="reportForm">
+                        <div class="mb-3">
+                          <img
+                            id="reportImagePreview"
+                            src=""
+                            class="img-fluid rounded mb-3"
+                          />
+                          <label class="form-label"
+                            >Describe your observations:</label
+                          >
+                          <textarea
+                            class="form-control"
+                            rows="3"
+                            required
+                          ></textarea>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Email (optional):</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            placeholder="name@example.com"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        id="btn-submit-report"
+                        type="button"
+                        class="btn btn-warning"
+                      >
+                        <i class="fas fa-paper-plane me-2"></i>Submit Report
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diseases Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Diseases We Can Detect</h2>
+          <p class="text-muted">
+            Our system identifies these common paddy plant diseases
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <a href="../new/leafblight.html" class="text-decoration-none">
+              <div class="card disease-card h-100 border-0 shadow-sm">
+                <img
+                  src="../static/bacterial.jpeg"
+                  class="card-img-top"
+                  alt="Bacterial leaf blight"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Bacterial leaf blight</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <a href="../new/leafstreak.html" class="text-decoration-none">
+              <div class="card disease-card h-100 border-0 shadow-sm">
+                <img
+                  src="../static/streak1.jpg"
+                  class="card-img-top"
+                  alt="Bacterial leaf streak"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Bacterial leaf streak</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <a href="../new/panicle.html" class="text-decoration-none">
+              <div class="card disease-card h-100 border-0 shadow-sm">
+                <img
+                  src="../static/panicle.jpeg"
+                  class="card-img-top"
+                  alt="Bacterial panicle blight"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Bacterial panicle blight</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <a href="../new/blast.html" class="text-decoration-none">
+              <div class="card disease-card h-100 border-0 shadow-sm">
+                <img
+                  src="../static/blast.jpeg"
+                  class="card-img-top"
+                  alt="Blast"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Blast</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <a href="../new/brown.html" class="text-decoration-none">
+              <div class="card disease-card h-100 border-0 shadow-sm">
+                <img
+                  src="../static/brown.jpg"
+                  class="card-img-top"
+                  alt="Brown spot"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Brown spot</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <a href="../new/downy.html" class="text-decoration-none">
+              <div class="card disease-card h-100 border-0 shadow-sm">
+                <img
+                  src="../static/downy.jpg"
+                  class="card-img-top"
+                  alt="Downy mildew"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Downy mildew</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <a href="../new/tungro.html" class="text-decoration-none">
+              <div class="card disease-card h-100 border-0 shadow-sm">
+                <img
+                  src="../static/tungro.jpeg"
+                  class="card-img-top"
+                  alt="Tungro"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Tungro</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <a href="../new/hispa.html" class="text-decoration-none">
+              <div class="card disease-card h-100 border-0 shadow-sm">
+                <img
+                  src="../static/hispa1.jpeg"
+                  class="card-img-top"
+                  alt="Hispa"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Hispa</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <h2 class="fw-bold mb-4">Contact Us</h2>
+            <div class="mb-4">
+              <h5>Address</h5>
+              <p>
+                <i class="fas fa-map-marker-alt me-2 text-success"></i
+                >Hyderabad, Telangana, India
+              </p>
+            </div>
+            <div class="mb-4">
+              <h5>Phone</h5>
+              <p>
+                <i class="fas fa-phone me-2 text-success"></i>+91 1234567890
+              </p>
+            </div>
+            <div class="mb-4">
+              <h5>Email</h5>
+              <p>
+                <i class="fas fa-envelope me-2 text-success"></i
+                >contact@example.com
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h4 class="mb-4">Send Us a Message</h4>
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-success">
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2023 PaddyDiagnose. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-white me-3"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-white"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Google Translate -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+
+    <!-- Custom JS -->
+    <script
+      src="{{ url_for('static', filename='main.js') }}"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
