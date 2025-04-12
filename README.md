@@ -101,3 +101,15 @@ plant-disease-detector/
     ├── model.pth         # PyTorch trained weights
     └── model.ipynb       # Jupyter notebooks
 ```
+
+## 🤝 How to Contribute
+
+We welcome contributions from the community! To help improve this project:
+
+1. **Fork** the repository:  
+   [![Fork](https://img.shields.io/github/forks/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2?style=social)](https://github.com/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2/fork)
+
+2. **Create** a feature branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+
