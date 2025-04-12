@@ -47,8 +47,8 @@ flask run
 
 | Disease Name | Example Image | Description | Confidence Threshold |
 |--------------|---------------|-------------|----------------------|
-| **Hispa** | <img src="static/examples/hispa.jpg" width="150"> | Caused by leaf miners creating white streaks | >75% |
-| **Tungro** | <img src="static/examples/tungro.jpg" width="150"> | Yellow-orange discoloration of leaves | >70% |
+| **Hispa** | <img src="static/examples/hispa.jpeg" width="150"> | Caused by leaf miners creating white streaks | >75% |
+| **Tungro** | <img src="static/examples/tungro.jpeg" width="150"> | Yellow-orange discoloration of leaves | >70% |
 | **Blast Disease** | <img src="static/examples/blast.jpeg" width="150"> | Diamond-shaped lesions with gray centers | >80% |
 | **Brown Spot** | <img src="static/examples/brown.jpg" width="150"> | Small brown spots with yellow halos | >65% |
 | **Healthy Plant** | <img src="static/examples/healthy.jpg" width="150"> | No disease detected | >90% |
