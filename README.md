@@ -150,3 +150,28 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
+
+## 📬 Contact
+
+**Project Maintainer**:  
+[![GitHub Profile](https://img.shields.io/badge/👨💻_GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/MOHAN1665)  
+[![Email Contact](https://img.shields.io/badge/📧_Email-Contact%20Me-D14836?style=for-the-badge&logo=gmail)](mailto:your.email@example.com)
+
+**Project Links**:  
+[![Repository](https://img.shields.io/badge/📂_Repo-Paddy_Plant_Disease_Prediction-8A2BE2?style=for-the-badge)](https://github.com/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2)  
+[![Open Issues](https://img.shields.io/github/issues-raw/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2?color=green&label=🐞%20Issues&style=for-the-badge)](https://github.com/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2/issues)
+
+---
+
+<div align="center" style="margin-top: 20px;">
+  <a href="https://github.com/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2/stargazers">
+    <img src="https://img.shields.io/github/stars/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2?style=social" alt="Stars">
+  </a>
+  <a href="https://github.com/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2/network/members">
+    <img src="https://img.shields.io/github/forks/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2?style=social" alt="Forks">
+  </a>
+  <a href="https://github.com/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2?color=blue" alt="License">
+  </a>
+</div>
