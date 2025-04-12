@@ -41,10 +41,16 @@ flask run
 ```
 5. Open your browser at ```http://localhost:5000```
 
-## 🏗️ Project Architecture
-graph TD
-    A[User Interface] -->|Upload Image| B(Flask Server)
-    B --> C[Preprocessing]
-    C --> D[TensorFlow Model]
-    D --> E[Grad-CAM Heatmap]
-    E --> F[Results Display]
+## 🌿 Supported Diseases
+
+<div align="center">
+
+| Disease Name | Example Image | Description | Confidence Threshold |
+|--------------|---------------|-------------|----------------------|
+| **Bacterial Leaf Blight** | <img src="static/examples/blight.jpg" width="150"> | Yellowing and wilting of leaves | >75% |
+| **Bacterial Leaf Streak** | <img src="static/examples/streak.jpg" width="150"> | Linear yellow streaks between veins | >70% |
+| **Blast Disease** | <img src="static/examples/blast.jpg" width="150"> | Diamond-shaped lesions with gray centers | >80% |
+| **Brown Spot** | <img src="static/examples/brown_spot.jpg" width="150"> | Small brown spots with yellow halos | >65% |
+| **Healthy Plant** | <img src="static/examples/healthy.jpg" width="150"> | No disease detected | >90% |
+
+</div>
