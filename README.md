@@ -78,3 +78,25 @@ graph TD
     style B fill:#2196F3,stroke:#0D47A1
     style D fill:#FF9800,stroke:#E65100
 ```
+```bash
+plant-disease-detector/
+├── app.py                # Main Flask application
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+├── disease_reports.json  # User-submitted disease reports
+│
+├── static/               # All static assets
+│   ├── main.css          # Global styles
+│   ├── script.js         # Frontend interactivity
+│   ├── examples/         # Sample disease images
+│   └── screenshots/      # Application screenshots
+│
+├── templates/            # Frontend templates
+│   ├── index.html        # Main upload interface
+│   └── results.html      # Prediction results page
+│   └── and other diseases related html files
+│
+└── models/               # AI Model files
+    ├── model.pth         # PyTorch trained weights
+    └── EfficientNetV2S.ipynb           # Jupyter notebooks
+```
