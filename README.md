@@ -45,7 +45,7 @@ flask run
 
 ## 🖥️ Usage Demo
 
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 30px 0; padding: 0 20px; box-sizing: border-box;">
+<div style="display: flex; justify-content: space-between; margin: 30px 0; padding: 0 20px; box-sizing: border-box;width: 100vw; margin-left: -20px;">
 
   <!-- Upload Interface -->
   <div style="width: 48%; text-align: center;style="display: flex !important;">
