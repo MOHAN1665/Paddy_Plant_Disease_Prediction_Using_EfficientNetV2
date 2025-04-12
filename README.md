@@ -43,15 +43,23 @@ flask run
 
 ## 🖥️ Usage Demo
 
-<div align="center">
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 20px 0;">
 
-### 📤 Upload Interface
-[![Upload Screen](static/screenshots/upload_thumb.png)](static/screenshots/upload.png)  
-*Click image to enlarge*
+<div style="flex: 1; min-width: 300px; max-width: 400px;">
+  <h4 style="margin-bottom: 10px;">📤 Upload Interface</h4>
+  <a href="static/screenshots/upload.png" target="_blank">
+    <img src="static/screenshots/upload_thumb.png" alt="Upload Interface" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  </a>
+  <p style="font-size: 0.9em; color: #666; margin-top: 8px;"><i>Click to enlarge</i></p>
+</div>
 
-### 📊 Results Page
-[![Results Screen](static/screenshots/results_thumb.png)](static/screenshots/results.png)  
-*Click image to enlarge*
+<div style="flex: 1; min-width: 300px; max-width: 400px;">
+  <h4 style="margin-bottom: 10px;">📊 Results Page</h4>
+  <a href="static/screenshots/results.png" target="_blank">
+    <img src="static/screenshots/results_thumb.png" alt="Results Page" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  </a>
+  <p style="font-size: 0.9em; color: #666; margin-top: 8px;"><i>Click to enlarge</i></p>
+</div>
 
 </div>
 
