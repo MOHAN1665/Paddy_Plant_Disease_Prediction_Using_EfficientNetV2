@@ -48,7 +48,7 @@ flask run
 <div style="display: flex; justify-content: space-between; width: 100%; margin: 30px 0; padding: 0 20px; box-sizing: border-box;">
 
   <!-- Upload Interface -->
-  <div style="width: 48%; text-align: center;">
+  <div style="width: 48%; text-align: center;style="display: flex !important;">
     <h4 style="margin-bottom: 15px; color: #2c3e50;">📤 Upload Interface</h4>
     <img src="static/screenshots/upload_thumb.png" alt="Upload Interface" 
          style="width: 40%; max-width: 40%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: block;">
@@ -56,7 +56,7 @@ flask run
   </div>
 
   <!-- Results Page -->
-  <div style="width: 48%; text-align: center;">
+  <div style="width: 48%; text-align: center;style="display: flex !important;">
     <h4 style="margin-bottom: 15px; color: #2c3e50;">📊 Results Page</h4>
     <img src="static/screenshots/results_thumb.png" alt="Results Page" 
          style="width: 40%; max-width: 40%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: block;">
