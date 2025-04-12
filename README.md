@@ -21,7 +21,7 @@
 
 ## 📦 Installation
 
-# 1.Clone the repository
+1.Clone the repository
 ```bash
 git clone https://github.com/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2.git
 cd plant-disease-detection
