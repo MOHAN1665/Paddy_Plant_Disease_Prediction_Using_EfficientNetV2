@@ -156,7 +156,7 @@ SOFTWARE.
 
 **Project Maintainer**:  
 [![GitHub Profile](https://img.shields.io/badge/👨💻_GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/MOHAN1665)  
-[![Email Contact](https://img.shields.io/badge/📧_Email-Contact%20Me-D14836?style=for-the-badge&logo=gmail)](mailto:your.email@example.com)
+[![Email Contact](https://img.shields.io/badge/📧_Email-Contact%20Me-D14836?style=for-the-badge&logo=gmail)](mailto:pmohankumar854@gmail.com)
 
 **Project Links**:  
 [![Repository](https://img.shields.io/badge/📂_Repo-Paddy_Plant_Disease_Prediction-8A2BE2?style=for-the-badge)](https://github.com/MOHAN1665/Paddy_Plant_Disease_Prediction_Using_EfficientNetV2)  
