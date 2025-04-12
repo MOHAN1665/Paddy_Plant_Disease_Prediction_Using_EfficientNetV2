@@ -43,24 +43,32 @@ flask run
 
 ## 🖥️ Usage Demo
 
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 20px 0;">
-
-<div style="flex: 1; min-width: 300px; max-width: 400px;">
-  <h4 style="margin-bottom: 10px;">📤 Upload Interface</h4>
-  <a href="static/screenshots/upload.png" target="_blank">
-    <img src="static/screenshots/upload_thumb.png" alt="Upload Interface" style="width: 30%; max-width: 200px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  </a>
-  <p style="font-size: 0.9em; color: #666; margin-top: 8px;"><i>Click to enlarge</i></p>
-</div>
-
-<div style="flex: 1; min-width: 300px; max-width: 400px;">
-  <h4 style="margin-bottom: 10px;">📊 Results Page</h4>
-  <a href="static/screenshots/results.png" target="_blank">
-    <img src="static/screenshots/results_thumb.png" alt="Results Page" style="width: 30%; max-width: 200px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  </a>
-  <p style="font-size: 0.9em; color: #666; margin-top: 8px;"><i>Click to enlarge</i></p>
-</div>
-
+<div align="center" style="margin: 30px 0;">
+  <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 300px; max-width: 400px; text-align: center;">
+      <h4 style="margin-bottom: 15px; color: #2c3e50;">📤 Upload Interface</h4>
+      <a href="static/screenshots/upload.png" target="_blank" style="text-decoration: none;">
+        <img src="static/screenshots/upload_thumb.png" alt="Upload Interface" 
+             style="width: 100%; max-width: 350px; border-radius: 10px; 
+                    box-shadow: 0 6px 12px rgba(0,0,0,0.15); transition: transform 0.3s ease;">
+        <p style="font-size: 0.9em; color: #7f8c8d; margin-top: 10px;">
+          <i>Click to view full screenshot</i>
+        </p>
+      </a>
+    </div>
+    <div style="flex: 1; min-width: 300px; max-width: 400px; text-align: center;">
+      <h4 style="margin-bottom: 15px; color: #2c3e50;">📊 Results Page</h4>
+      <a href="static/screenshots/results.png" target="_blank" style="text-decoration: none;">
+        <img src="static/screenshots/results_thumb.png" alt="Results Page" 
+             style="width: 100%; max-width: 350px; border-radius: 10px; 
+                    box-shadow: 0 6px 12px rgba(0,0,0,0.15); transition: transform 0.3s ease;">
+        <p style="font-size: 0.9em; color: #7f8c8d; margin-top: 10px;">
+          <i>Click to view full screenshot</i>
+        </p>
+      </a>
+    </div>
+    
+  </div>
 </div>
 
 ### Step-by-Step Guide:
