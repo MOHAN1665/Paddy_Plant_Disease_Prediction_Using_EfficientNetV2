@@ -1,6 +1,6 @@
 # 🌱 Plant Disease Detection System
 
-![Project Banner](static/examples/paddy.jpg)  
+![Project Banner](static/examples/paddy.png)  
 *An AI-powered solution for detecting diseases in rice plants*
 
 ## 🚀 Features
