@@ -51,7 +51,7 @@ flask run
       <h4 style="margin-bottom: 15px; color: #2c3e50;">📤 Upload Interface</h4>
       <a href="static/screenshots/upload.png" target="_blank" style="text-decoration: none;">
         <img src="static/screenshots/upload_thumb.png" alt="Upload Interface" 
-             style="width: 100%; max-width: 350px; border-radius: 10px; 
+             style="width: 30%; max-width: 350px; border-radius: 10px; 
                     box-shadow: 0 6px 12px rgba(0,0,0,0.15); transition: transform 0.3s ease;">
         <p style="font-size: 0.9em; color: #7f8c8d; margin-top: 10px;">
           <i>Click to view full screenshot</i>
@@ -62,7 +62,7 @@ flask run
       <h4 style="margin-bottom: 15px; color: #2c3e50;">📊 Results Page</h4>
       <a href="static/screenshots/results.png" target="_blank" style="text-decoration: none;">
         <img src="static/screenshots/results_thumb.png" alt="Results Page" 
-             style="width: 100%; max-width: 350px; border-radius: 10px; 
+             style="width: 30%; max-width: 350px; border-radius: 10px; 
                     box-shadow: 0 6px 12px rgba(0,0,0,0.15); transition: transform 0.3s ease;">
         <p style="font-size: 0.9em; color: #7f8c8d; margin-top: 10px;">
           <i>Click to view full screenshot</i>
