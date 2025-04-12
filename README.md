@@ -78,6 +78,7 @@ graph TD
     style B fill:#2196F3,stroke:#0D47A1
     style D fill:#FF9800,stroke:#E65100
 ```
+## 📂 Directory Structure
 ```bash
 plant-disease-detector/
 ├── app.py                # Main Flask application
@@ -98,5 +99,5 @@ plant-disease-detector/
 │
 └── models/               # AI Model files
     ├── model.pth         # PyTorch trained weights
-    └── EfficientNetV2S.ipynb           # Jupyter notebooks
+    └── model.ipynb       # Jupyter notebooks
 ```
