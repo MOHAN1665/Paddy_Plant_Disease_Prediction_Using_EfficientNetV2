@@ -328,3 +328,189 @@ body {
   display: flex;
   gap: 10px;
 }
+
+/* Hero Carousel */
+.hero-carousel {
+  margin-top: 56px; /* Adjust based on navbar height */
+}
+
+.hero-carousel .carousel-item {
+  height: 70vh;
+  min-height: 400px;
+}
+
+.hero-carousel img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.hero-carousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  bottom: 100px;
+}
+
+/* Stats Section */
+.counter-box {
+  padding: 20px 0;
+}
+
+/* How It Works */
+.step-number {
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+/* Testimonials */
+#testimonialCarousel .carousel-control-prev-icon,
+#testimonialCarousel .carousel-control-next-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: 1.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#upload-section {
+  scroll-margin-top: 80px; /* Same as navbar height */
+}
+
+/* styles.css */
+.hero-section {
+  background: linear-gradient(rgba(46, 125, 50, 0.85), rgba(56, 142, 60, 0.85)),
+    url("../static/paddy-field-blur.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 100px 0;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .card {
+  background-color: rgba(255, 255, 255, 0.93);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonial Styles */
+/* Testimonials */
+.testimonial-card {
+  border-radius: 12px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.testimonial-avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-avatar-container {
+  position: relative;
+}
+
+.testimonial-rating {
+  font-size: 1.2rem;
+}
+
+.testimonial-content {
+  padding: 20px;
+}
+
+.quote-icon-start {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  z-index: 0;
+}
+
+.testimonial-text {
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+  line-height: 1.7;
+  color: #495057;
+}
+
+.testimonial-author {
+  color: #2e7d32;
+}
+
+.testimonial-location {
+  font-size: 0.9rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 60%;
+  padding: 1.2rem;
+  background-color: #2e7d32;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .testimonial-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .testimonial-content {
+    padding: 10px 0;
+  }
+}
+
+/* How It Works Section */
+#how-it-works {
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.step-image-overlay {
+  position: relative;
+}
+
+.step-image-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  transition: all 0.3s ease;
+}
+
+.step-icon {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .step-number {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+}
+
+.card:hover .step-icon {
+  transform: translateY(-5px);
+}
