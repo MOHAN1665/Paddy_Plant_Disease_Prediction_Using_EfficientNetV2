@@ -103,7 +103,43 @@ flask run
 </div>
 
 ## 🏗️ Project Architecture
+```mermaid
+flowchart TD
+    A[User Phase] --> B[Data Processing Phase]
+    B --> C[Model Phase]
+    C --> D[Output Phase]
 
+    subgraph A[User Phase]
+        A1[User Uploads Image] -->|Mobile/Web Interface| A2{Image Validation}
+        A2 -->|Valid| B1
+        A2 -->|Invalid| A3[Error: Request New Image]
+    end
+
+    subgraph B[Data Processing Phase]
+        B1[Preprocessing] --> B2[HSV Conversion]
+        B2 --> B3[Green Pixel Masking]
+        B3 --> B4[Resize to 256x256]
+        B4 --> B5[Normalize:<br/>μ=[0.485,0.456,0.406]<br/>σ=[0.229,0.224,0.225]]
+        B5 --> C1
+    end
+
+    subgraph C[Model Phase]
+        C1[EfficientNetV2-S Inference] --> C2[Grad-CAM Activation]
+        C2 --> C3[Class Prediction]
+        C3 --> C4[Confidence Thresholding]
+        C4 -->|Confidence >75%| D1
+        C4 -->|Confidence 50-75%| D2
+        C4 -->|Confidence <50%| D3
+    end
+
+    subgraph D[Output Phase]
+        D1[High Confidence Diagnosis] --> D4[Display Results]
+        D2[Medium Confidence Diagnosis] --> D4
+        D3[Low Confidence Flag] --> D4
+        D4 --> D5[Heatmap Visualization]
+        D5 --> D6[Treatment Recommendations]
+    end
+```
 ```mermaid
 graph TD
     A[Client Browser] -->|HTTP Request| B[Flask Server]
